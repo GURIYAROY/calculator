@@ -1,0 +1,62 @@
+<html>
+  <head>
+  <title>function</title>
+  <style>
+  .div{
+height:400px;
+width:300;
+box-shadow:10px 10px 10px 10px grey;
+background-color:blue;
+margin-top:40px;
+margin-left:70px;
+border:4px groove black;
+padding:20px;
+color:white;
+font-size:20px;
+margin:auto;
+
+}
+</style>
+  </head>
+  <body >
+  <center class="div">
+  <h1 style="text-decoration:underline;">CALCULATOR</h1>
+  1st no: <input type="number" name="name" id="first" step="any" autofocus=" " placeholder="Enter first number ">
+   </br></br>
+  Choose your operator: &emsp;&emsp;&nbsp; 
+  <select id="ope">
+   <option value="+">+</option>
+   <option value="-">-</option>
+   <option value="*">*</option>
+   <option value="/">/</option>
+   <select>
+  </br></br>
+  2nd no: <input type="number" name="name" id="second" step="any" placeholder="Enter Second number">
+   </br></br>
+   
+  Result:&nbsp; <input type="text" step="any" name="name" id="out" readonly=" " placeholder="Result">
+  </br></br><button onclick="cal()" style="color:blue;background-color:white;">CALCULATE</button></br></br>&emsp; 
+
+ </body></center>
+  <script>
+ function cal()
+ {
+  var opr1=document.getElementById('first').value;
+  var opr2=document.getElementById("second").value;
+  var ope=document.getElementById('ope').value;<!--takes value from operator dropdown-->
+  if(ope=='+')
+  { var res= parseInt(opr1)+parseInt(opr2);}
+  
+  else if(ope=='-')
+  {var res=parseInt(opr1)-parseInt(opr2);}
+  
+  else if(ope=='*')
+  {var res=parseInt(opr1)*parseInt(opr2);}
+  
+  else if(ope=='/')
+  {var res=parseInt(opr1)/parseInt(opr2);}
+  
+  document.getElementById('out').value=res;
+   }
+   </script>
+</html>
